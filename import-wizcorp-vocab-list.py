@@ -26,4 +26,6 @@ for line in src.split('\n'):
     word[0] = word[0].lower()
     word = [w.strip() for w in word]
     [english, japanese, kana, notes] = word
+    if japanese[-4:] == "（する）":
+        kana += "（する）"
     out.writerow([japanese, kana, english, notes])
