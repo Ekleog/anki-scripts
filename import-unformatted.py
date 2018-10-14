@@ -21,6 +21,8 @@ out = csv.writer(sys.stdout)
 
 for line in sys.stdin:
     line = line.split()
+    if line == []:
+        continue
 
     kanji = line[0]
     reading = line[1]
